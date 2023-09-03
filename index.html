@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="showcase">
+        <div class="showcase-top">
+
+            <div class="navbar">
+                <img src="./images/netflix.png" alt="" class="logo">
+                <div class="logo-right">
+                    <button class="english">
+                        <img src="./images/globe.png" alt="" class="globe">
+                        <span>English</span>
+                        <img src="./images/down-arrow.png" alt="" class="down-arr">
+                    </button>
+                    <button class="sign-in">Sign In</button>
+                </div>
+            </div>
+            <div class="title-container">
+                <div class="title-up">
+                    <h1 class="ultimate">Unlimited movies, TV shows and more</>
+                    <h2 class="watch">Watch anywhere. Cancel anytime.</h2>
+                    <p class="ready">Ready to watch? Enter your email to create or restart your membership.</p>
+                </div>
+                <div class="title-down">
+                    <input type="email" name="myemail" id="eml" placeholder="Email address">
+                    <button class="started">
+                        <span>Get Started</span>
+                        <img src="./images/next.png" alt="" class="next-arr">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="second-container">
+        <div class="items">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/cards/v2.1/enjoyOnTv/en.png" alt="item-one">
+            <h2>Enjoy on your TV</h2>
+            <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+        </div>
+        <div class="items">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/cards/v2.1/watchEverywhere/en.png" alt="item-two">
+            <h2>Watch everywhere</h2>
+            <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+        </div>
+        <div class="items">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/cards/v2.1/kids/en-GB.png" alt="item-three">
+            <h2>Create profiles for kids</h2>
+            <p>Send children on adventures with their favourite characters in a space made just for them—free with your membership.</p>
+        </div>
+        <div class="items">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/cards/v2.1/download/en.png
+            " alt="item-four">
+            <h2>Download your shows to watch offline</h2>
+            <p>Save your favourites easily and always have something to watch.</p>
+        </div>
+    </div>
+    <div class="third-container">
+        <h2 class="question">Frequently Asked Questions</h2>
+        <button class="collapsable">What is Netflix?</button>
+        <div class="content">
+            <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.</p>
+        </div>
+        <button class="collapsable">How much does Netflix cost?</button>
+        <div class="content">
+            <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹ 149 to ₹ 649 a month. No extra costs, no contracts.</p>
+        </div>
+        <button class="collapsable">Where can I watch?</button>
+        <div class="content">
+            <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.</p>
+        </div>
+        <button class="collapsable">How do I cancel?</button>
+        <div class="content">
+            <p>Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+        </div>
+        <button class="collapsable">What can I watch on Netflix?</button>
+        <div class="content">
+            <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+        </div>
+        <button class="collapsable">Is Netflix good for kids?</button>
+        <div class="content">
+            <p>Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.</p>
+        </div>
+        <p class="dwn">Ready to watch? Enter your email to create or restart your membership.</p>
+        <div class="title-down last-in">
+            <input type="email" name="myemail" id="eml" placeholder="Email address">
+            <button class="started">
+                <span>Get Started</span>
+                <img src="./images/next.png" alt="" class="next-arr">
+            </button>
+        </div>
+
+        <p class="call">Questions? Call 000-800-919-1694</p> 
+        <div class="footer">
+
+            <p>Account</p> 
+            <p>Media Centre</p> 
+            <p>Investor Relations</p> 
+            <p>Jobs</p> 
+            <p>Ways to Watch</p> 
+            <p>Terms of Use</p> 
+            <p>Privacy</p> 
+            <p>Corporate Information</p> 
+            <p>Contact Us</p> 
+            <p>Speed Test</p> 
+            <p>Legal Notices</p> 
+            <p>Only on Netflix</p> 
+
+        </div>
+        <p class="netflix">Netflix India</p>
+
+
+    <script>
+        let coll = document.getElementsByClassName("collapsable");
+        let i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                let content = this.nextElementSibling;
+                if(content.style.display === "block"){
+                    content.style.display = "none";
+                }else{
+                    content.style.display = "block";
+                }
+            })
+            
+        }
+    </script>
+</body>
+</html>
